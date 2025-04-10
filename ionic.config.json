@@ -1,0 +1,7 @@
+{
+  "name": "memory-leak-ng",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
