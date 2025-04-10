@@ -13,12 +13,19 @@ import { DataService, Message } from '../services/data.service';
 })
 export class HomePage {
   private data = inject(DataService);
-  constructor() {}
+  private detachedDivs: any[] = [];
+  constructor() { }
 
   refresh(ev: any) {
     setTimeout(() => {
       (ev as RefresherCustomEvent).detail.complete();
     }, 3000);
+  }
+
+  ionViewDidEnter() {
+    const detachedDiv = document.createElement('div');
+    detachedDiv.textContent = 'This is a detached div from home';
+    this.detachedDivs.push(detachedDiv)
   }
 
   getMessages(): Message[] {
