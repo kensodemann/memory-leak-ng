@@ -22,11 +22,11 @@ export class HomePage {
     }, 3000);
   }
 
-  ionViewDidEnter() {
-    const detachedDiv = document.createElement('div');
-    detachedDiv.textContent = 'This is a detached div from home';
-    this.detachedDivs.push(detachedDiv)
-  }
+  //ionViewDidEnter() {
+  //  const detachedDiv = document.createElement('div');
+  //  detachedDiv.textContent = 'This is a detached div from home';
+  //  this.detachedDivs.push(detachedDiv)
+  //}
 
   getMessages(): Message[] {
     return this.data.getMessages();
